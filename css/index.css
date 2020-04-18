@@ -1,0 +1,72 @@
+﻿* {
+  padding: 0;
+  margin: 0;
+}
+html,body{
+  height:100%;
+  width:100%;
+}
+body {
+  background-image: url("../img/bg.jpg");
+  background-size: 100% 100%;
+  background-repeat:no-repeat;
+  overflow: hidden;
+}
+li {
+  list-style: none;
+}
+marquee{
+    width:500px;
+    color:#000;
+    margin:60px auto;
+    display:block;
+    font-size:30px;
+    font-family:"华文行楷";
+}
+.wrapper{
+    width:500px;
+    height:500px;
+    margin:100px auto;
+    perspective:1000;
+}
+.wrapper .pic{
+    position:relative;
+    width:265px;
+    height:218px;
+    margin:0 auto;
+    transform-style:preserve-3d;
+    animation:rota 15s linear infinite;
+}
+@keyframes rota{
+  from{
+    transform:rotateY(0deg);
+  }
+  to{
+    transform:rotateY(360deg);
+  }
+}
+.wrapper .pic li{
+    position:absolute;
+    left:0;
+    top:0;
+}
+.wrapper .pic li img{
+  width:265px;
+  height:218px;
+}
+.wrapper .text{
+  margin-top:80px;
+  color:#fff;
+  font-size:24px;
+}
+span{
+  animation:moveTo 12s linear infinite;
+}
+@keyframes moveTo{
+  0%{
+    transform:rotateZ(0deg);
+  }
+  100%{
+    transform:rotateZ(360deg);
+  }
+}
